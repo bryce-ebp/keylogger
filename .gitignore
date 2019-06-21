@@ -1,0 +1,16 @@
+
+*.db
+.vs/keylogger/v16/.suo
+*.exe
+*.ilk
+*.pdb
+*.ipch
+*.obj
+*.log
+*.tlog
+*.sln
+*.idb
+*.vcxproj
+*.filters
+*.user
+*.txt
