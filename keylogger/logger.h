@@ -20,19 +20,19 @@ public:
 	{ 0x34, "D4" }, { 0x35, "D5" },
 	{ 0x36, "D6" }, { 0x37, "D7" },
 	{ 0x38, "D8" }, { 0x39, "D9" },
-	{ 0x41, "A" }, { 0x42, "B" },
-	{ 0x43, "C" }, { 0x44, "D" },
-	{ 0x45, "E" }, { 0x46, "F" },
-	{ 0x47, "G" }, { 0x48, "H" },
-	{ 0x49, "I" }, { 0x4A, "J" },
-	{ 0x4B, "K" }, { 0x4C, "L" },
-	{ 0x4D, "M" }, { 0x4E, "N" },
-	{ 0x4F, "O" }, { 0x50, "P" },
-	{ 0x51, "Q" }, { 0x52, "R" },
-	{ 0x53, "S" }, { 0x54, "T" },
-	{ 0x55, "U" }, { 0x56, "V" },
-	{ 0x57, "W" }, { 0x58, "X" },
-	{ 0x59, "Y" }, { 0x5A, "Z" },
+	{ 0x41, "a" }, { 0x42, "b" },
+	{ 0x43, "c" }, { 0x44, "d" },
+	{ 0x45, "e" }, { 0x46, "f" },
+	{ 0x47, "g" }, { 0x48, "h" },
+	{ 0x49, "i" }, { 0x4A, "j" },
+	{ 0x4B, "k" }, { 0x4C, "l" },
+	{ 0x4D, "m" }, { 0x4E, "n" },
+	{ 0x4F, "o" }, { 0x50, "p" },
+	{ 0x51, "q" }, { 0x52, "r" },
+	{ 0x53, "s" }, { 0x54, "t" },
+	{ 0x55, "u" }, { 0x56, "v" },
+	{ 0x57, "w" }, { 0x58, "x" },
+	{ 0x59, "y" }, { 0x5A, "z" },
 	{ 0x6A, "Numpad *" }, { 0xFC, "NoName" },
 	{ 0x60, "N0" }, { 0x61, "N1" },
 	{ 0x62, "N2" }, { 0x63, "N3" },
@@ -105,7 +105,10 @@ public:
 	{ 0x06, "X Button 2 **" } };
 
 public:
-	void WriteToFile( const std::string_view & );
+	void WriteToFile( const std::string_view &, bool = false ) const;
+
+private:
+	void InputToFile( const std::string_view & ) const;
 
 };
 

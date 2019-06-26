@@ -15,7 +15,7 @@ private:
 	static std::uintptr_t KeyboardHook( std::int32_t, std::uint32_t, std::uintptr_t );
 
 private:
-	HHOOK m_original_hook { };
+	void *m_original_hook { };
 
 };
 
