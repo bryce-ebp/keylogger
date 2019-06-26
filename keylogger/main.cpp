@@ -1,13 +1,14 @@
 #include "hooks.h"
+#include "memory.h"
 
 
-int main( ) {
-	g_hooks.Init( );
+int main() {
+	g_hooks.Init();
 
-	MSG msg { };
-	while( GetMessage( &msg, nullptr, 0u, 0u ) ) {
-		TranslateMessage( &msg );
-		DispatchMessage( &msg );
+	MsgStructure msg { };
+	while (g_memory.GetMessage(msg)) {
+		g_memory.TranslateMessage(&msg);
+		g_memory.DispatchMessage(&msg);
 	}
 
 	return 0;

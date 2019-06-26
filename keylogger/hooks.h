@@ -1,12 +1,12 @@
 #pragma once
 
 #include <cstdint>
-#include <Windows.h>
 
 
 class Hooks {
 public:
 	void Init( );
+	bool HandleUpper(bool, bool);
 
 public:
 	~Hooks( );
@@ -15,7 +15,7 @@ private:
 	static std::uintptr_t KeyboardHook( std::int32_t, std::uint32_t, std::uintptr_t );
 
 private:
-	void *m_original_hook { };
+	void *original_hook_ { };
 
 };
 
